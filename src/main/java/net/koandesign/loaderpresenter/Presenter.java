@@ -17,13 +17,17 @@ public abstract class Presenter<V> {
 		view = null;
 	}
 
+	protected V getView() {
+		return view;
+	}
+
 	protected boolean hasView() {
 		return view != null;
 	}
 
+	protected abstract void onDestroyPresenter();
+
 	protected abstract void onAttachView(@NonNull V view);
 
 	protected abstract void onDetachView();
-
-	protected abstract void onDestroyPresenter();
 }
