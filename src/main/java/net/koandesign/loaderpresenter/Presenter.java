@@ -25,6 +25,8 @@ public abstract class Presenter<V> {
 		return view != null;
 	}
 
+	protected abstract void onCreatePresenter();
+
 	protected abstract void onDestroyPresenter();
 
 	protected abstract void onAttachView(@NonNull V view);

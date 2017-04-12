@@ -42,6 +42,9 @@ public class PresenterLoader<T extends Presenter> extends Loader<T> {
 		// Create the Presenter using the Factory
 		presenter = factory.create();
 
+		// Notify the presenter that it has been created
+		presenter.onCreatePresenter();
+
 		// Deliver the result
 		deliverResult(presenter);
 	}

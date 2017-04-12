@@ -6,6 +6,11 @@ import android.support.annotation.NonNull;
 public class SimplePresenter<V> extends Presenter<V> {
 
 	@Override
+	protected void onCreatePresenter() {
+
+	}
+
+	@Override
 	protected void onDestroyPresenter() {
 
 	}
