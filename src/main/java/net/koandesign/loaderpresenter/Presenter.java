@@ -17,8 +17,13 @@ public abstract class Presenter<V> {
 		view = null;
 	}
 
-	protected V getView() {
-		return view;
+	@NonNull
+	protected V getViewOrThrow() {
+		if (view == null) {
+			throw new IllegalStateException("View is null but should not be");
+		} else {
+			return view;
+		}
 	}
 
 	protected boolean hasView() {
